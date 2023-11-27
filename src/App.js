@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Trainee from './components/Trainee';
 import Christmas from './components/Christmas';
+import Pets from './components/Pets';
 
 
 function App() {
@@ -14,12 +15,24 @@ function App() {
         <p> Trying react, day one</p>
         <input placeholder='add text here..'></input>
         <button>Click Here</button>
+        <br />
+        <ul>
+          <li>List thing one</li>
+          <li>List thing two</li>
+        </ul>
+        {/*because of props on the trainee page we can set what
+        data appears when we do the trainee component  */}
+        <Trainee name="Adele" age="27" job="LBG" />
+        <Christmas />
         <br/>
-        <br/>
-      <Trainee/>
-      <br/>
-      <Christmas/>
-
+        </section>
+        <section>
+        <h1>Pet Corner</h1>
+        <img src='https://th.bing.com/th/id/R.934347256ce6150f1d9fc5c25684f9a3?rik=Vi8OB%2bl6H6PdUA&pid=ImgRaw&r=0' width={250}/>
+        <Pets name="Herbie" breed="Springador" colour="Black & White" nickname="Herbalish"/>
+        <Pets name="Ted" breed="Cockapoo" colour="Black & White" nickname="Terry"/>
+        <Pets name="Charlie" breed="Cocker Spaniel" colour="Brown" nickname="Charlos"/>
+        <img src='https://th.bing.com/th/id/R.934347256ce6150f1d9fc5c25684f9a3?rik=Vi8OB%2bl6H6PdUA&pid=ImgRaw&r=0' width={350}/>
       </section>
     </div>
 
