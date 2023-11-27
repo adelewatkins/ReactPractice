@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Trainee from './components/Trainee';
+import Christmas from './components/Christmas';
 
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
         <button>Click Here</button>
         <br/>
         <br/>
-        <img src='https://www.gardeningknowhow.com/wp-content/uploads/2020/11/christmas-tree.jpg' width={300}></img>
       <Trainee/>
+      <br/>
+      <Christmas/>
 
       </section>
     </div>

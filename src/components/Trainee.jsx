@@ -13,7 +13,9 @@ function Trainee() {
         <p>Age: 27</p>
         <p>Job: LBG</p>
             </section>
-
+        <p>
+            <img src="https://th.bing.com/th/id/OIP.hjB9WdbxiHMWlDnOBJjsNgHaJd?rs=1&pid=ImgDetMain" alt="Homer" width={200}/>
+        </p>
         </div>
     );
 }
