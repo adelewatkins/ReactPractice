@@ -4,6 +4,8 @@ import Trainee from './components/Trainee';
 import Christmas from './components/Christmas';
 import Pets from './components/Pets';
 import pet from './data/pet.json';
+import KingsSolution from './components/KingsSolution';
+import kings from './data/kings.json'
 
 
 function App() {
@@ -18,6 +20,15 @@ function App() {
       <Pets name={animal.name} breed={animal.breed}
         colour={animal.colour} nickname={animal.nickname} />
     );
+  }
+
+  const kingsComp = [];
+  for (const person of kings) {
+    console.log("Person", person);
+    kingsComp.push(
+      <KingsSolution nm={person.nm} cty={person.cty}
+        hse={person.hse} yrs={person.yrs} />
+    );
 
   }
 
@@ -31,10 +42,16 @@ function App() {
         <input placeholder='add text here..'></input>
         <button>Click Here</button>
         <br />
-        <ul>
-          <li>List thing one</li>
-          <li>List thing two</li>
-        </ul>
+        <br />
+        <form>
+          <fieldset>
+            <legend>List</legend>
+            <ul>
+              <li>List thing one</li>
+              <li>List thing two</li>
+            </ul>
+          </fieldset>
+        </form>
         {/*because of props on the trainee page we can set what
         data appears when we do the trainee component  */}
         <Trainee name="Adele" age="27" job="LBG" />
@@ -42,7 +59,7 @@ function App() {
         <br />
       </section>
       <section>
-        
+
         <h1>Pet Corner</h1>
         <img src='https://th.bing.com/th/id/R.934347256ce6150f1d9fc5c25684f9a3?rik=Vi8OB%2bl6H6PdUA&pid=ImgRaw&r=0' width={250} />
         {/* Again because of props on the pets page 
@@ -56,6 +73,16 @@ function App() {
         <h1>Json Practice</h1>
         {/* calling the pet components array to the page */}
         {petComponents}
+      </section>
+      <h1>Prop Types</h1>
+      <article>
+        <Pets name="Shandy" breed="Springer Spaniel"
+          colour="Liver & White" nickname="Shandy Woo" />
+      </article>
+      <h1>Kings json task</h1>
+      <section>
+
+        {kingsComp}
       </section>
 
     </div>

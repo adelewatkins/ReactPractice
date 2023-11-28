@@ -1,4 +1,7 @@
 
+// imports the prop-types library from the node modules folder
+import PropTypes from 'prop-types' ;
+
 function Pets(props) {
     return (
         <div>
@@ -23,6 +26,14 @@ function Pets(props) {
         </div>
     );
 
+}
+
+Pets.propTypes = {
+name: PropTypes.string,
+breed: PropTypes.string,
+// can put .isRequired after string
+colour: PropTypes.string,
+nickname: PropTypes.string,
 }
 
 export default Pets;
