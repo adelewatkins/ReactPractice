@@ -6,13 +6,13 @@ function Pets(props) {
                 <h3>Introducing..</h3>
             </heading>
             <section>
-                Name: {props.Name}
+                Name: {props.name}
                 <br />
-                Breed: {props.Breed}
+                Breed: {props.breed}
                 <br />
-                Colour: {props.Colour}
+                Colour: {props.colour}
                 <br />
-                Nickname: {props.Nickname}
+                Nickname: {props.nickname}
                 <br />
                 <label for="yesNo" name="yesNo">Cute? </label>
                 <input type="checkbox" name="yesNo" ></input>

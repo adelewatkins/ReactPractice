@@ -1,28 +1,27 @@
-
 [
     {
-        "Name": "Herbie",
-        "Breed": "Springador",
-        "Colour": "Black & White",
-        "Nickname": "Herbalish"
+        "name": "Herbie",
+        "breed": "Springador",
+        "colour": "Black & White",
+        "nickname": "Herbalish"
     },
     {
-        "Name": "Tia",
-        "Breed": "Morkie",
-        "Colour": "Grey",
-        "Nickname": "Tito"
+        "name": "Tia",
+        "breed": "Morkie",
+        "colour": "Grey",
+        "nickname": "Tito"
     },
     {
-        "Name": "Rupert",
-        "Breed": "Cocker Spaniel",
-        "Colour": "Black",
-        "Nickname": "Pooops"
+        "name": "Rupert",
+        "breed": "Cocker Spaniel",
+        "colour": "Black",
+        "nickname": "Pooops"
     },
     {
-        "Name": "Murphy",
-        "Breed": "Cocker Spaniel",
-        "Colour": "Black & White",
-        "Nickname": "Smurf"
+        "name": "Murphy",
+        "breed": "Cocker Spaniel",
+        "colour": "Black & White",
+        "nickname": "Smurf"
     }
 ]
 

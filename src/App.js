@@ -15,8 +15,8 @@ function App() {
     console.log("Pet:", animal);
     petComponents.push(
       // Pulling the data from the json file
-      <Pets Name={animal.Name} Breed={animal.Breed}
-        Colour={animal.Colour} Nickname={animal.Nickname} />
+      <Pets name={animal.name} breed={animal.breed}
+        colour={animal.colour} nickname={animal.nickname} />
     );
 
   }
@@ -41,9 +41,8 @@ function App() {
         <Christmas />
         <br />
       </section>
-      
       <section>
-
+        
         <h1>Pet Corner</h1>
         <img src='https://th.bing.com/th/id/R.934347256ce6150f1d9fc5c25684f9a3?rik=Vi8OB%2bl6H6PdUA&pid=ImgRaw&r=0' width={250} />
         {/* Again because of props on the pets page 
