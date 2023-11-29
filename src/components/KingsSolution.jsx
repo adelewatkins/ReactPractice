@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 
 function KingsSolution(props) {
-    console.log("props", props);
-    console.log("name", props.nm);
-    console.log("city", props.cty);
-    console.log("house", props.hse);
-    console.log("years", props.yrs);
+    // console.log("props", props);
+    // console.log("name", props.nm);
+    // console.log("city", props.cty);
+    // console.log("house", props.hse);
+    // console.log("years", props.yrs);
+    
     return (
         <div>
+            <h3> King </h3>
             Name: {props.nm}
             <br />
             City: {props.cty}
