@@ -22,8 +22,10 @@ function Queens() {
     const queenComponents = [];
     // looping through each queen in the json file
     for (const queen of queens) {
-        // if filter is blank OR the queens name matches the filter put them on the page
-        if (filter.length === 0 || queen.nm === filter) {
+        // if filter is blank OR the queens name matches the 
+        // filter put them on the page. To lower case makes it
+        // case insensitive. Starts with filters as you type
+        if (filter.length === 0 || queen.nm.toLowerCase().startsWith(filter.toLowerCase())) {
             queenComponents.push(
                 <Queen key={queen.nm + " " + queen.yrs}
                     nm={queen.nm}
@@ -33,11 +35,11 @@ function Queens() {
             );
         }
     }
-
     return (
         <div>
             <h2>Queens</h2>
-            <input type="text" value={filter} onChange={handleChange} />
+            <input type="text" placeholder="Type here.." 
+               value={filter} onChange={handleChange} />
             {queenComponents}
         </div>
     );
