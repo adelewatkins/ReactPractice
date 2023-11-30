@@ -3,6 +3,7 @@ import './App.css';
 import MyButton from './components/MyButton';
 import Counter from './components/Counter';
 import Queens from './components/QueenSolution';
+import CatFacts from './components/CatFacts';
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
 
       <h2>Counter</h2>
       <Counter />
-      <Queens />
+      {/* <Queens /> */}
+      <CatFacts />
 
     </div>
 
