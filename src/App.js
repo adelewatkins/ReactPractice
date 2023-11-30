@@ -20,6 +20,7 @@ function App() {
       <Counter />
       <CatFacts />
      <QueensSolutionAPI />
+     {/* <Queens/> */}
 
     </div>
 
