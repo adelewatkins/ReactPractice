@@ -1,31 +1,38 @@
 import { useState } from "react";
-import queens from '../data/queens.json';
 import Queen from "./Queen";
+import axios from "axios";
 
 
 
-function Queens() {
+function QueensSolutionAPI() {
     const [filter, setFilter] = useState("");
+    const [queens, setQueens] = useState("");
 
+    function getQueens() {
+        axios.get("https://raw.githubusercontent.com/JHarry444/LBG-React-Demo/main/src/data/kings.json")
+
+            .then((response) => {
+                setQueens(response.data)
+            })
+            .catch((error) => {
+                setQueens("There was an error, please try again");
+            })
+
+    }
     function handleChange(event) {
-        // browser triggers an event whenever the page is interacted with
-        // this event is passed into any event handler function
+
         console.log("Event:", event);
-        // the target of the event is whatever element it was triggered on
         console.log("Target:", event.target);
-        // as it's an input I can grab the contents with .value
         console.log("Value:", event.target.value);
 
         setFilter(event.target.value);
     }
 
+
     console.log("Filter:", filter);
     const queenComponents = [];
-    // looping through each queen in the json file
     for (const queen of queens) {
-        // if filter is blank OR the queens name matches the 
-        // filter put them on the page. To lower case makes it
-        // case insensitive. Starts with filters as you type
+
         if (filter.length === 0 || queen.nm.toLowerCase().startsWith(filter.toLowerCase())) {
             queenComponents.push(
                 <Queen key={queen.nm + " " + queen.yrs}
@@ -38,15 +45,18 @@ function Queens() {
     }
     return (
         <div>
-            <h2>Queens</h2>
-            <input type="text" placeholder="Type here.." 
-               value={filter} onChange={handleChange} />
+            <h2>Monarchs</h2>
+            <input type="text" placeholder="Type here.."
+                value={filter} onChange={handleChange} />
+            <button onClick={() => getQueens()}>Click for Monarchs</button>
             {queenComponents}
         </div>
     );
 }
 
-export default Queens;
+export default QueensSolutionAPI;
+
+
 
 
 
