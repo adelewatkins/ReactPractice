@@ -14,6 +14,7 @@ function QueensSolutionAPI() {
     function getQueens() {
         axios.get("https://raw.githubusercontent.com/JHarry444/LBG-React-Demo/main/src/data/kings.json")
 
+        // The setqueens is whats used to update the usestate 
             .then((response) => { setQueens(response.data) })
             .catch((error) => { setQueens("Error, please try again"); })
     
